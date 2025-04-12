@@ -13,11 +13,13 @@ repositories {
 val ktormVersion: String by project
 val kotlinTelegramBotVersion: String by project
 val kodeinVersion: String by project
+val dotenvVersion: String by project
 
 dependencies {
     implementation("io.github.kotlin-telegram-bot.kotlin-telegram-bot:telegram:${kotlinTelegramBotVersion}")
     implementation("org.ktorm:ktorm-core:${ktormVersion}")
     implementation("org.kodein.di:kodein-di:${kodeinVersion}")
+    implementation("io.github.cdimascio:dotenv-kotlin:${dotenvVersion}")
     testImplementation(kotlin("test"))
 }
 
@@ -26,7 +28,4 @@ tasks.test {
 }
 kotlin {
     jvmToolchain(23)
-}
-
-dependencies {
 }
